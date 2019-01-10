@@ -4,11 +4,29 @@
              xmlns:local="clr-namespace:CobaHitAPI.Forms"
              x:Class="CobaHitAPI.Forms.MainPage">
 
-    <StackLayout>
+    <StackLayout VerticalOptions="Center">
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Entry x:Name="entryName"
+               Placeholder="Name"
+               WidthRequest="300"
+               HorizontalOptions="Center" />
+        <Button x:Name="btnCheck"
+                Text="Cek akun GitHub"
+                HorizontalOptions="Center"
+                Clicked="BtnCheck_Clicked" />
+        <ActivityIndicator x:Name="aiBusy"
+                           IsRunning="False"
+                           WidthRequest="300"
+                           HeightRequest="50"
+                           HorizontalOptions="CenterAndExpand"
+                           Margin="30,0"/>
+        <Image x:Name="imgUser"
+               WidthRequest="250"
+               HorizontalOptions="Center" />
+        <Label x:Name="lblName"
+               HorizontalOptions="Center" />
+        <Label x:Name="lblUrl"
+               HorizontalOptions="Center" />
     </StackLayout>
 
 </ContentPage>
